@@ -382,7 +382,7 @@ export const ARTICLES_11_TO_15: BlogArticle[] = [
     readingTime: '8 min read',
     excerpt: 'Deleting single quotation marks often breaks contractions, turning "don\'t" into "dont". Learn how to strip quotes while keeping apostrophes safe.',
     quickAnswer: 'To clean quoted text without losing apostrophes: use the Quote Cleaner tool. Select "Remove Enclosing / Outer Quotes Only". The algorithm distinguishes between quotation marks (which occur at the boundaries of phrases or next to whitespace) and apostrophes (which sit between letters inside words like "don\'t", "we\'ll", or "o\'clock").',
-    relevantToolIds: ['quote-cleaner', 'punctuation-cleaner', 'find-replace', 'whitespace-remover'],
+    relevantToolIds: ['quote-remover', 'punctuation-cleaner', 'find-replace', 'whitespace-remover'],
     sections: [
       {
         heading: 'The Conflict Between Quotation Marks and Apostrophes',

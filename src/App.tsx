@@ -204,13 +204,28 @@ export default function App() {
             onSelectTool={handleSelectTool}
           />
         )}
-        {currentPage === 'blog-article' && currentArticle && (
-          <BlogArticlePage
-            article={currentArticle}
-            onNavigate={handleNavigate}
-            onSelectArticle={handleSelectArticle}
-            onSelectTool={handleSelectTool}
-          />
+        {currentPage === 'blog-article' && (
+          currentArticle ? (
+            <BlogArticlePage
+              article={currentArticle}
+              onNavigate={handleNavigate}
+              onSelectArticle={handleSelectArticle}
+              onSelectTool={handleSelectTool}
+            />
+          ) : (
+            <div className="py-16 text-center max-w-lg mx-auto space-y-4">
+              <h2 className="text-2xl font-bold text-neutral-900">Guide Not Found</h2>
+              <p className="text-neutral-600 text-sm">
+                The article you requested could not be located. It may have been moved or updated.
+              </p>
+              <button
+                onClick={() => handleNavigate('blog')}
+                className="inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-neutral-900 text-white text-sm font-semibold hover:bg-neutral-800 transition-colors"
+              >
+                Browse All Guides
+              </button>
+            </div>
+          )
         )}
         {currentPage === 'about' && (
           <AboutUsPage onNavigate={handleNavigate} />

@@ -17,7 +17,8 @@ import {
   ChevronRight,
   ShieldCheck,
   Layers,
-  Sparkles
+  Sparkles,
+  SlidersHorizontal
 } from 'lucide-react';
 import { BlogArticle, PageId, ToolId } from '../../types';
 import { BLOG_ARTICLES, getRelatedArticles } from '../../data/blogArticles';
